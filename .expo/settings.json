@@ -1,0 +1,8 @@
+{
+  "urlRandomness": "qs-s24",
+  "hostType": "tunnel",
+  "lanType": "ip",
+  "dev": true,
+  "minify": false,
+  "https": false
+}
