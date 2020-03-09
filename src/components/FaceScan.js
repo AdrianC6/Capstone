@@ -20,7 +20,12 @@ export default class FaceScan extends Component{
     let localAuth = LocalAuthentication.isEnrolledAsync()
     console.log(localAuth)
   }
-     
+   
+  /*
+    Checks to see if the user is authenticated after scanning user's face
+    if successful they continue to the next screen
+    if failed they are alerted to that
+  */
   _authenticate=async()=>{
     try{
       let auth = await LocalAuthentication.authenticateAsync()

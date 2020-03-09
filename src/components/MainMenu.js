@@ -4,8 +4,6 @@ import { createAppContainer } from "react-navigation";
 import { createStackNavigator } from "react-navigation-stack";
 import * as LocalAuthentication from 'expo-local-authentication';
 
-//import AuthWindow from "./src/components/AuthWindow"
-
 export default class MainMenu extends Component {
     constructor(props){
       super(props);
@@ -22,6 +20,10 @@ export default class MainMenu extends Component {
     this._GetAuth();
   }
 
+  /*
+    Checks the phone to see what authentication methods are available
+    sets the authentication method for the buttons on the next screen
+  */
   _GetAuth=async()=>{
     LocalAuthentication.hasHardwareAsync();
     let AuthMethod = await LocalAuthentication.supportedAuthenticationTypesAsync();
@@ -31,7 +33,6 @@ export default class MainMenu extends Component {
   }
 
   render(){
-  
     return (
       <View style={styles.container}>
          <Text style={{fontSize:25,fontWeight:"bold"}}>Capstone Project</Text>

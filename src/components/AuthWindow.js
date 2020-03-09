@@ -19,6 +19,10 @@ export default class AuthWindow extends Component{
     this._CheckAuth()
   }
 
+  /*
+    Checks what authentication methods the phone has and enables/disables buttons based on that
+    if none are available you cant use the app
+  */ 
   _CheckAuth=()=>{
     var Authmethod = this.props.navigation.getParam("authMethod")
     // console.log(this.state.authMethod)

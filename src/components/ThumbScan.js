@@ -23,6 +23,11 @@ export default class ThumbScan extends Component{
     console.log(localAuth)
   }
 
+  /*
+    Checks to see if the user is authenticated after scanning finger print
+    if successful they continue to the next screen
+    if failed they are alerted to that
+  */
   _authenticate=async()=>{
     try{
       let auth = await LocalAuthentication.authenticateAsync()
@@ -71,8 +76,8 @@ const styles = StyleSheet.create({
       fontSize:20,
     },
     buttons:{
-      margin:620,
-      position:"absolute",
+      margin:300,
+      position:"relative",
       height:40,
       width:130,
       backgroundColor: '#f7f7f7',
@@ -86,5 +91,6 @@ const styles = StyleSheet.create({
     },
     scroll:{
       backgroundColor: '#259b9a',
+      flex:1
     }
   });
